@@ -19,7 +19,7 @@ public class ContextManager : MonoBehaviour {
     public GameContext currentGameContext;
     public GameContext previousGameContext;
 
-    private CameraController cameraController;
+    public CameraController cameraController;
 
     void Awake()
     {
@@ -31,12 +31,13 @@ public class ContextManager : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        cameraController = Camera.main.GetComponent<CameraController>();
     }
 
     void Start()
     {
         InitGame();
-        cameraController = Camera.main.GetComponent<CameraController>();
+        
     }
 
     public void SwitchContext(GameContext contextWanted)

@@ -33,6 +33,7 @@ public class Fish : MonoBehaviour {
         isRightDirection = true;
         boundaries = GetComponent<Boundaries>();
         playerHandler = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHandler>();
+        currentLife = maxLife;
     }
 	
 	// Update is called once per frame
